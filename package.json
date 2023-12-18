@@ -1,6 +1,6 @@
 {
   "name": "opencv4nodejs-prebuilt-install",
-  "version": "4.1.202",
+  "version": "4.1.203",
   "description": "Asynchronous OpenCV 4.x nodejs bindings with JavaScript and TypeScript API.",
   "keywords": [
     "opencv",
@@ -27,12 +27,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/udarrr/opencv4nodejs-prebuilt-install.git"
+    "url": "https://github.com/hypatiatech/opencv4nodejs-prebuilt-install.git"
   },
   "bugs": {
-    "url": "https://github.com/udarrr/opencv4nodejs-prebuilt-install/issues"
+    "url": "https://github.com/hypatiatech/opencv4nodejs-prebuilt-install/issues"
   },
-  "homepage": "https://github.com/udarrr/opencv4nodejs-prebuilt-install/#readme",
+  "homepage": "https://github.com/hypatiatech/opencv4nodejs-prebuilt-install/#readme",
   "main": "./lib/opencv4nodejs.js",
   "typings": "./lib/index.d.ts",
   "scripts": {
@@ -48,10 +48,8 @@
     "create_opencvnode_prebuild": "npm run build_src_opencvlib && node install/download.js && rimraf osOpencvWorlds/linux/opencv/build/lib/cmake && prebuild --include-regex \"\\.(node|a|so|dylib|lib|dll).*$\""
   },
   "opencv4nodejs": {
-    "autoBuildWithoutContrib": 1,
-    "autoBuildOpencvVersion": "4.1.1",
-    "autoBuildFlags": "-DBUILD_opencv_world=1 -DBUILD_LIST=core,highgui,videoio -DOPENCV_FORCE_3RDPARTY_BUILD=ON -DBUILD_PNG=ON -DBUILD_TIFF=ON -DBUILD_JASPER=ON -DBUILD_JPEG=ON -DBUILD_ZLIB=ON -DBUILD_OPENEXR=ON -DWITH_FFMPEG=OFF -DWITH_GSTREAMER=ON -DBUILD_USE_SYMLINKS=OFF -DWITH_VTK=OFF",
-    "disableAutoBuild": 1
+    "autoBuildOpencvVersion": "4.6.0",
+    "autoBuildFlags": "-DBUILD_opencv_world=1 -DBUILD_LIST=core,highgui,imgproc,imgcodecs,features2d,flann,photo,stitching,gapi,text,xfeatures2d,ximgproc -DOPENCV_FORCE_3RDPARTY_BUILD=ON -DBUILD_PNG=ON -DBUILD_TIFF=ON -DBUILD_JASPER=ON -DBUILD_JPEG=ON -DBUILD_ZLIB=OFF -DWITH_FFMPEG=OFF -DWITH_GSTREAMER=OFF -DBUILD_USE_SYMLINKS=OFF -DWITH_VTK=OFF -DBUILD_EXAMPLES=OFF -DBUILD_DOCS=OFF -DBUILD_TESTS=OFF -DBUILD_opencv_dnn=ON -DENABLE_FAST_MATH=ON -DBUILD_PERF_TESTS=OFF -DBUILD_JAVA=OFF -DOPENCV_ENABLE_NONFREE=ON"
   },
   "gypfile": false,
   "dependencies": {
