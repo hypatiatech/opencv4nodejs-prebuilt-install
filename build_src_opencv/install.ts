@@ -112,7 +112,7 @@ class InstallOpencv {
         let patterns: Array<string> = [
           path.join("opencv", "build", "include"),
           path.join("opencv", "build", "lib", `libopencv_world.${packageJson.opencv4nodejs.autoBuildOpencvVersion}.dylib`),
-          // path.join("opencv", "build", "lib", `libopencv_world.${packageJson.opencv4nodejs.autoBuildOpencvVersion.slice(0, 3)}.dylib`),
+          path.join("opencv", "build", "lib", `libopencv_world.${packageJson.opencv4nodejs.autoBuildOpencvVersion === '4.6.0' ? '406' :packageJson.opencv4nodejs.autoBuildOpencvVersion.slice(0, 3)}.dylib`),
           path.join("opencv", "build", "bin"),
         ];
         await Pack.pack(patterns, `${path.join(process.cwd(), "osOpencvWorlds", "darwin", file)}`);
@@ -120,7 +120,7 @@ class InstallOpencv {
         let patterns: Array<string> = [
           path.join("opencv", "build", "include"),
           path.join("opencv", "build", "lib", `libopencv_world.so.${packageJson.opencv4nodejs.autoBuildOpencvVersion}`),
-          // path.join("opencv", "build", "lib", `libopencv_world.so.${packageJson.opencv4nodejs.autoBuildOpencvVersion.slice(0, 3)}`),
+          path.join("opencv", "build", "lib", `libopencv_world.so.${packageJson.opencv4nodejs.autoBuildOpencvVersion === '4.6.0' ? '406' :packageJson.opencv4nodejs.autoBuildOpencvVersion.slice(0, 3)}`),
           path.join("opencv", "build", "bin"),
         ];
         await Pack.pack(patterns, `${path.join(process.cwd(), "osOpencvWorlds", "linux", file)}`);
