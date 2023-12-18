@@ -1,6 +1,6 @@
 {
   "name": "opencv4nodejs-prebuilt-install",
-  "version": "4.1.203",
+  "version": "4.1.204",
   "description": "Asynchronous OpenCV 4.x nodejs bindings with JavaScript and TypeScript API.",
   "keywords": [
     "opencv",
@@ -49,7 +49,8 @@
   },
   "opencv4nodejs": {
     "autoBuildOpencvVersion": "4.6.0",
-    "autoBuildFlags": "-DBUILD_opencv_world=1 -DBUILD_LIST=core,highgui,imgproc,imgcodecs,features2d,flann,photo,stitching,gapi,text,xfeatures2d,ximgproc -DOPENCV_FORCE_3RDPARTY_BUILD=ON -DBUILD_PNG=ON -DBUILD_TIFF=ON -DBUILD_JASPER=ON -DBUILD_JPEG=ON -DBUILD_ZLIB=OFF -DWITH_FFMPEG=OFF -DWITH_GSTREAMER=OFF -DBUILD_USE_SYMLINKS=OFF -DWITH_VTK=OFF -DBUILD_EXAMPLES=OFF -DBUILD_DOCS=OFF -DBUILD_TESTS=OFF -DBUILD_opencv_dnn=ON -DENABLE_FAST_MATH=ON -DBUILD_PERF_TESTS=OFF -DBUILD_JAVA=OFF -DOPENCV_ENABLE_NONFREE=ON"
+    "autoBuildFlags": "-DBUILD_opencv_world=1 -DBUILD_LIST=core,highgui,imgproc,imgcodecs,features2d,flann,photo,stitching,gapi,text,xfeatures2d,ximgproc -DOPENCV_FORCE_3RDPARTY_BUILD=ON -DBUILD_PNG=ON -DBUILD_TIFF=ON -DBUILD_JASPER=ON -DBUILD_JPEG=ON -DBUILD_ZLIB=OFF -DWITH_FFMPEG=OFF -DWITH_GSTREAMER=OFF -DBUILD_USE_SYMLINKS=OFF -DWITH_VTK=OFF -DBUILD_EXAMPLES=OFF -DBUILD_DOCS=OFF -DBUILD_TESTS=OFF -DBUILD_opencv_dnn=ON -DENABLE_FAST_MATH=ON -DBUILD_PERF_TESTS=OFF -DBUILD_JAVA=OFF -DOPENCV_ENABLE_NONFREE=ON",
+    "disableAutoBuild": 1
   },
   "gypfile": false,
   "dependencies": {
